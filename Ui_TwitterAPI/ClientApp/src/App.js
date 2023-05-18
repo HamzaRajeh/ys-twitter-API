@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './twitter_logo.png';
- import { CpanelReport} from './features/CpanelReports/CpanelAdmin';
- import   {Cpanel}   from './features/Cpanel/Cpanel';
+  import   {Cpanel}   from './features/Cpanel/Cpanel';
 import {  Routes,Route,   NavLink } from 'react-router-dom';
 import './App.css';
 import {Box, Switch } from '@mui/material';
@@ -31,7 +30,7 @@ window.location.reload();
           <nav className="sidebar">
 
           <NavLink  className='App-link' to={'/Cpanel'}>Twitter API</NavLink>
-          <NavLink  className='App-link' to={'/CpanelReport'}>Report</NavLink>
+         
           
           </nav>
 
@@ -39,9 +38,9 @@ window.location.reload();
         
        </Box>
 <Routes>
-<Route path="/" element={<></>} />
+<Route path="/" element={<Cpanel/>} />
 <Route path="/Cpanel" element={<Cpanel/>} />
-<Route path="/CpanelReport" element={<CpanelReport  />} />
+ 
 </Routes>
  
  

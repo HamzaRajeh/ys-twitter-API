@@ -3,6 +3,7 @@ import './style/style.css';
 import $ from 'jquery'
 import * as ObjCardTweet  from './Tweets';
 import { Box, Button } from '@mui/material';
+import { DeleteTweet, PostTweet } from './ManageTweets';
 const styleParent={ fontWeight:"900",borderRadius:4,borderBottom:"3px black solid",width:"100%"};
 const closeMenu=()=>{
   let menVis=document.getElementsByClassName('visible-menu');
@@ -49,8 +50,8 @@ closeMenu();
  openMenu("#ul-2"); 
     }}> Manage Tweets</Button>
     <div id='ul-2' className="submenu hidden-menu">
-        <div><Button onClick={()=>onPush(<></>)}>Post  Tweets </Button></div>
-        <div><Button onClick={()=>onPush(<></>)}> Delete  Tweets</Button></div>
+        <div><Button onClick={()=>onPush(<PostTweet/>)}>Post Tweets </Button></div>
+        <div><Button onClick={()=>onPush(<DeleteTweet/>)}> Delete Tweets</Button></div>
        </div>
     </li>
   
@@ -61,7 +62,9 @@ closeMenu();
  
     }}>  Users Lookup</Button>
       <div id='ul-4' className="submenu hidden-menu">
-        <div><Button onClick={()=>onPush(<></>)} >GET /2/users/me</Button></div>
+        <div><Button onClick={()=>onPush(<Button onClick={()=>{
+alert("Info User's");
+}}> GET</Button>)} >Info User's</Button></div>
       
        </div>
     </li>
@@ -72,47 +75,3 @@ closeMenu();
     </>)}
 
 
-export const MenuReports=({onPush})=> {
-  return(<Box>
-  
-  <nav id='Grid-Menue'  className="navigation">
-  <div className='logo' >
-<h3>Reports</h3>
-</div>
-<ul>
-<li><Button  sx={styleParent} onClick={()=>{
-closeMenu();
- openMenu("#ul-1");
- 
-    }}>Sampled Stream</Button>
-    <div id='ul-1' className="submenu hidden-menu">
-         <div><Button onClick={()=>onPush(<ObjCardTweet.FetchTweets/>)} >Get Stream</Button></div>
-       </div>
-       
-       </li>
-    <li><Button sx={styleParent} onClick={()=>{
- closeMenu();
- openMenu("#ul-2"); 
-    }}> Manage Tweets</Button>
-    <div id='ul-2' className="submenu hidden-menu">
-        <div><Button onClick={()=>onPush(<></>)}>Post  Tweets </Button></div>
-        <div><Button onClick={()=>onPush(<></>)}> Delete  Tweets</Button></div>
-       </div>
-    </li>
-  
-    <li><Button  sx={styleParent} onClick={()=>{
- closeMenu();
- openMenu("#ul-4"); 
-
- 
-    }}>  Users Lookup</Button>
-      <div id='ul-4' className="submenu hidden-menu">
-        <div><Button onClick={()=>onPush(<></>)} >GET /2/users/me</Button></div>
-      
-       </div>
-    </li>
- 
- </ul>
-</nav>
-
-  </Box>)}
