@@ -66,7 +66,7 @@ export const   FetchTweets=()=>{
                   </div>
               </div>
             <div><h1> Tweets Stream</h1></div>
-            <div ><TextField type='text' size='small'  label="Search" helperText={'Search About Any Data Of tweet '}  sx={{width:"50%"}}/></div>
+            <div ><TextField type='text' size='small'  label="Search" helperText={'Search About Any Data Of tweet '} sm={{ m: 1, width: '50%' }}  sx={{ m: 1, width: '90%' }} /></div>
           <div>
              <Button sx={{width:"50%"}} onClick={()=>{
               setShowData([...Data.slice(StartIndex+26,EndIndex+26)])

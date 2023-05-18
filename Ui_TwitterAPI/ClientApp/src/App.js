@@ -25,8 +25,7 @@ window.location.reload();
      
         <div className='App-logo-div '> 
         <img src={logo} className="App-logo" alt="logo" /> 
-        <p>twitter API</p>
-          </div>
+           </div>
           <nav className="sidebar">
 
           <NavLink  className='App-link' to={'/Cpanel'}>Twitter API</NavLink>

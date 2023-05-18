@@ -10,11 +10,6 @@
     height: 10rem;
     border:2px black solid;
     border-radius: 1rem;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem;
-}
-.Card-Collect:first-child{
-
-    color: red;
+   color: red;
+    padding-top: 3rem;
 }
