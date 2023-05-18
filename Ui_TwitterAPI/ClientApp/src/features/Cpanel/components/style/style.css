@@ -1,0 +1,99 @@
+/* define a fixed width for the entire menu */
+.navigation {
+  
+   
+  border-radius: 5px ;
+ justify-content: center;
+  box-shadow:1px 0px 1px 1px #030303;
+ 
+}
+
+ .visible-menu {
+display: block;
+}
+.hidden-menu{
+display: none;
+}
+ ul{
+  display: inline ;
+  width: 100%;
+  list-style: none;
+  }
+  ul li{
+    
+    margin: 5px 10px;
+     padding:5px ;
+    border-right: 5px black solid;
+   }
+/* reset our lists to remove bullet points and padding */
+.mainmenu, .submenu {
+  list-style: none;
+   
+  
+}
+ /* make ALL links (main and submenu) have padding and background color */
+.mainmenu   {
+width: 90%;
+   border-bottom-left-radius:5px ;
+  border-bottom-right-radius:5px ;
+   padding:  7px 0px;
+  font-weight: 600;
+ font-size: medium;
+border: none;
+ }
+ 
+/* add hover behaviour */
+.mainmenu:hover {
+    background-color:rgb(230, 223, 223);
+ }
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+
+ 
+
+/*
+  we now overwrite the background-color for .submenu links only.
+  CSS reads down the page, so code at the bottom will overwrite the code at the top.
+*/
+
+.submenu button {
+  text-decoration:none;
+   padding: 10px;
+  margin: 5px 0px;
+  width: 70%;
+  /* color: black; */
+   border-radius:0px  10px 0px 10px;
+  font-weight: bold;
+  font-size: small;
+  border: none;
+border-right: 3px black solid;
+border-bottom: 3px black solid;
+
+ }
+
+/* hover behaviour for links inside .submenu */
+.submenu button:hover {
+    color: blue;
+  border-right: 3px blue solid;
+border-bottom: 3px blue solid;
+ }
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+ 
+ #Grid-Menue{
+  /* background-color: white; */
+  font-weight: bold;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+ }
+ .logo{
+ justify-content: center;
+  border-bottom: 5px black solid;
+ padding-bottom: 10px;
+ margin:5px ;
+ }

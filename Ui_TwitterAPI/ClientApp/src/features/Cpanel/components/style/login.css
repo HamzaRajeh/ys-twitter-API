@@ -1,0 +1,16 @@
+.btn-login{
+    width: 80%;
+    height: 30px;
+    background: none;
+    border-radius:10px;
+    margin: 20px;
+    font-weight: bold;
+    font-size: medium;
+    border: none;
+    border-bottom: 3px black solid;
+}
+
+.btn-login:hover{
+
+border: none;
+}

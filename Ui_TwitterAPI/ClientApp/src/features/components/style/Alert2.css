@@ -1,0 +1,105 @@
+.Alert{
+border-radius: 5px;
+     box-shadow: 0px 1px 2px rgb(12, 12, 12);
+     margin: 5px;
+     max-width: 700px;
+     min-width: 700px;
+   align-self: center;
+  
+  }
+.Alert-Header{
+display: flex;
+flex-direction: row;
+    
+ margin: 10px;
+ padding: 5px;
+}
+.Alert-Items{
+display: flex;
+flex-direction: row;
+ gap: 10px;
+ width: 400px;
+ overflow: auto;
+  }
+.Alert-Items label{
+ border-bottom: 2px red solid;
+}
+.Alert-Items button{
+
+    border: none;
+    border-left: 2px black solid;
+    border-right: 2px black solid;
+    background: none;
+    border-radius: 5px;
+
+}
+.Alert-Items button:hover{
+
+ background: red;
+
+}
+.Alert-status {
+    background:black;
+    color: white;
+    border:1px black solid ;
+    border-radius: 10px;
+    padding: 1px 20px;
+    margin: 2px;
+ 
+}
+.Alert-body{
+   display: none;
+  
+}
+.col-key{
+    margin: 2px;
+    border-left:2px black solid ;
+   width: 20%;
+display: inline-block;
+   
+ }
+ .col-value{
+    width: 50%;
+display: inline-block;
+
+ }
+.Alert-Showroom{
+    background:black;
+    color: white;
+    border:1px black solid ;
+    border-radius: 10px;
+    padding: 1px 20px;
+    margin: 2px;
+
+}
+.Alert-btn{
+    border:1px  gray solid;
+     border-radius: 5px;
+padding: 5px;
+min-width: 100px;
+margin: 5px 1px;
+ }
+.Alert-btn:hover{
+    border:1px  gray solid;
+    background: rgb(214, 211, 211);
+    border-radius: 5px;
+padding: 5px;
+min-width: 100px;
+margin: 5px 1px;
+
+}
+
+.view:hover{
+    background: lightgray;
+
+}
+ 
+.recive:hover{
+
+    background: lightgray;
+
+}
+.Alert-Time{
+
+    margin:3px ;
+}

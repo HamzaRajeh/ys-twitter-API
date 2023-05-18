@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+  margin: 0px 20px;
+}
+
+.App-logo {
+  height: 7vmin;
+  justify-self: end;
+  pointer-events: none;
+}
+.App-logo-div  {
+  display: inline;
+  width:25%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-float infinite 3s ease-in-out;
+  }
+}
+
+.App-header {
+  background-color: royalblue;
+  min-height: 7vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center ;
+  justify-content: flex-start;
+ box-shadow: 2px 2px 2px none;
+ border-radius: 10px;
+ margin: 20px  0px;
+}
+ 
+.App-link {
+  text-decoration: none;
+   font-size:medium;
+  margin:0 1vh;
+  padding: 10px;
+  color: white;
+}
+
+.sidebar .App-link.active {
+  border-bottom: 3px white solid;
+font-weight: bold;
+ }
+@keyframes App-logo-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
