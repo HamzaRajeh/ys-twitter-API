@@ -11,14 +11,9 @@ export const  CardTweet=({time="2023-05-10",TweetID="",TweetText="",id,UserID=''
         <>
         <div className="Card" style={{zIndex:id+2}}>
            <div className="Card-Header">
-            {/* <div className="Card-Items">
-            {infoTweet.map((info)=><label >{info}</label>)}
-               </div> */}
-             
 
-{/* <button className="Card-Tweet">{Tweet}</button> */}
-<span className="Card-Time">{time}</span>
-<span className="Card-UserID">{UserID}</span>
+ <span className="Card-Time">{time}</span>
+<span className="Card-UserID">User ID: {UserID}</span>
  
            </div>
            <div id={"Tweet"+id} className="Card-body">

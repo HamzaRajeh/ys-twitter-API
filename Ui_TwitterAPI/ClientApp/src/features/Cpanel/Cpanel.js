@@ -39,7 +39,7 @@ setView(e)
   </Item>
   </Grid>
   <Grid  item mt={{xs:4,md:0}} xs={12} md={9}>
-  <Item>
+  <Item  >
  {View} 
  </Item>
   </Grid>
