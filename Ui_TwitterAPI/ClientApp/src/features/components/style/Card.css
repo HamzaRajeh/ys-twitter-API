@@ -119,4 +119,23 @@
  background: none;
 
     }
-   
+    @media only screen and (max-width: 700px) {
+        .Card{
+               
+                  max-width: 20rem;
+                 min-width: 20rem;
+
+
+              }
+              .Card-Time{
+font-size: smaller;
+            }
+            .Card-UserID {
+                font-size: smaller;
+
+                padding: 1px 12px;
+               
+             
+            }
+         
+      }
