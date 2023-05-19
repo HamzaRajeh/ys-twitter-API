@@ -42,9 +42,9 @@ export const   FetchTweets=()=>{
    React.useEffect( ()=>{
      setTimeout(()=>{
       SampleStream();
-      setSeconds(Seconds+(2*1000))
+      setSeconds(Seconds+(1*1000))
     }
-    , 2*1000);
+    , 1*1000);
 
   setTotaltweets(Data.length);
  if(Seconds<((1000*60)*60)) 
