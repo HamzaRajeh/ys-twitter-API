@@ -4,7 +4,6 @@ import { CardTweet } from '../../components/Cards';
 import { Button } from '@mui/material';
 import './style/collect.css'
 import ButtonMailto from './Email' ;
-import { data } from 'jquery';
 
 
 
