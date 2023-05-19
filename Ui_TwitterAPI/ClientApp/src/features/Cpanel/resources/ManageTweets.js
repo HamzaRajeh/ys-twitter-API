@@ -23,9 +23,9 @@ export const HandelSendTweet=()=>{
     myHeaders.append("Content-Type", "application/json");
     
     var raw = JSON.stringify({
-      "data": {
+      
         "text":inputTweets.Msg[0].value
-      }
+     
     });
     
     var requestOptions = {
@@ -35,7 +35,7 @@ export const HandelSendTweet=()=>{
       redirect: 'follow'
     };
     
-    fetch("https://localhost:7076/TwitterAPI/PostTweetV1", requestOptions)
+    fetch("https://localhost:7076/TwitterAPI/CreateTweet", requestOptions)
       .then(response => response.text())
       .then(result => alert(result))
       .catch(error => console.log('error', error));
@@ -52,10 +52,9 @@ if(inputTweets.Delete[0].value==null)
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     
-    var raw = JSON.stringify({
-      "data": {
-        "text":inputTweets.Delete[0].value
-      }
+    var raw = JSON.stringify(
+      {
+        "Id":inputTweets.Delete[0].value.toString()
     });
     
     var requestOptions = {
@@ -65,7 +64,7 @@ if(inputTweets.Delete[0].value==null)
       redirect: 'follow'
     };
     
-    fetch("https://localhost:7076/TwitterAPI/PostTweetV1", requestOptions)
+    fetch("https://localhost:7076/TwitterAPI/DeleteTweet", requestOptions)
       .then(response => response.text())
       .then(result => alert(result))
       .catch(error => console.log('error', error));

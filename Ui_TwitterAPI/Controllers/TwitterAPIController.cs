@@ -480,6 +480,67 @@ namespace Ui_TwitterAPI.Controllers
         #endregion
 
 
+        //Manage Tweet
+        #region Manage Tweeet
+        [HttpPost]
+        [Route("[action]", Name = nameof(CreateTweet))]
+        public async Task<ActionResult> CreateTweet([FromBody]dynamic obj)
+        {
+            try
+            {
+                dynamic _data = JsonConvert.DeserializeObject<dynamic>(obj.ToString());
+                var client = new HttpClient();
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://api.twitter.com/2/tweets");
+                request.Headers.Add("Authorization", "OAuth oauth_consumer_key=\"Tgyne3cjav26Gdhy7vrESJgG2\",oauth_token=\"1658216914991063043-mkCXa0wGSpI5Y8b5kMXHtUwYIPPCLi\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1684453786\",oauth_nonce=\"P46dQaorkwJ\",oauth_version=\"1.0\",oauth_signature=\"j52HgqUFvgOJ8EqW3cPdt5NifIQ%3D\"");
+                request.Headers.Add("Cookie", "guest_id=v1%3A168422910947699651; guest_id_ads=v1%3A168422910947699651; guest_id_marketing=v1%3A168422910947699651; personalization_id=\"v1_HMDbZlt7MUb4XM4fali9Zg==\"");
+                var content = new StringContent("{\n    \"text\": \""+ _data.text.ToString() + "\"\n}", null, "application/json");
+                request.Content = content;
+                var response = await client.SendAsync(request);
+                response.EnsureSuccessStatusCode();
+                Console.WriteLine(await response.Content.ReadAsStringAsync());
+
+
+                return Ok(await response.Content.ReadAsStringAsync());
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+
+
+        }
+
+
+        [HttpPost]
+        [Route("[action]", Name = nameof(DeleteTweet))]
+        public async Task<ActionResult> DeleteTweet([FromBody] dynamic obj)
+        {
+            try
+            {
+                dynamic _data = JsonConvert.DeserializeObject<dynamic>(obj.ToString());
+                var client = new HttpClient();
+                var request = new HttpRequestMessage(HttpMethod.Delete, "https://api.twitter.com/2/tweets/" + _data.Id.ToString());
+                request.Headers.Add("Authorization", "OAuth oauth_consumer_key=\"Tgyne3cjav26Gdhy7vrESJgG2\",oauth_token=\"1658216914991063043-mkCXa0wGSpI5Y8b5kMXHtUwYIPPCLi\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1684456811\",oauth_nonce=\"AXCmUzZWGpa\",oauth_version=\"1.0\",oauth_signature=\"PWdFDRf%2B%2BiH3QM92zkNTQ0UwBjA%3D\"");
+                request.Headers.Add("Cookie", "guest_id=v1%3A168422910947699651; guest_id_ads=v1%3A168422910947699651; guest_id_marketing=v1%3A168422910947699651; personalization_id=\"v1_HMDbZlt7MUb4XM4fali9Zg==\"");
+                var response = await client.SendAsync(request);
+                response.EnsureSuccessStatusCode();
+                Console.WriteLine(await response.Content.ReadAsStringAsync());
+
+                return Ok(await response.Content.ReadAsStringAsync());
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+
+
+        }
+
+        #endregion
+
+
 
     }
 } 

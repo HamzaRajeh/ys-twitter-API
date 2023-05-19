@@ -54,20 +54,6 @@ closeMenu();
         <div><Button onClick={()=>onPush(<DeleteTweet/>)}> Delete Tweets</Button></div>
        </div>
     </li>
-  
-    <li><Button  sx={styleParent} onClick={()=>{
- closeMenu();
- openMenu("#ul-4"); 
-
- 
-    }}>  Users Lookup</Button>
-      <div id='ul-4' className="submenu hidden-menu">
-        <div><Button onClick={()=>onPush(<Button onClick={()=>{
-alert("Info User's");
-}}> GET</Button>)} >Info User's</Button></div>
-      
-       </div>
-    </li>
    </ul>
 </nav>
 </Box>
